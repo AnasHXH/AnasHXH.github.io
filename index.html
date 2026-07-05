@@ -93,7 +93,7 @@
         /* Hero Section */
         .hero {
             display: grid;
-            grid-template-columns: 1fr 280px;
+            grid-template-columns: 1fr 220px; /* Reduced to make the image smaller */
             gap: 3rem;
             align-items: center;
             padding: 3rem 0;
@@ -123,7 +123,7 @@
 
         .profile-img {
             width: 100%;
-            height: 280px;
+            height: 220px; /* Reduced to match the grid column */
             object-fit: cover;
             border-radius: var(--radius);
             box-shadow: var(--shadow-lg);
@@ -271,6 +271,21 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
+        
+        .linkedin-link {
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 500; 
+            font-size: 0.9rem; 
+            display: inline-block; 
+            margin-top: 0.75rem;
+            transition: color 0.2s;
+        }
+        
+        .linkedin-link:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
 
         ul.styled-list {
             list-style: none;
@@ -351,7 +366,7 @@
                 text-align: center;
             }
             .hero-text h1 { font-size: 2.2rem; }
-            .profile-img { max-width: 240px; margin: 0 auto; }
+            .profile-img { max-width: 200px; margin: 0 auto; }
             .social-bar { justify-content: center; }
             .nav-links { display: none; } /* Simplified for mobile */
         }
@@ -387,12 +402,12 @@
                     <a href="mailto:aaboessa@psu.edu.sa" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email Me</a>
                     <a href="https://scholar.google.com/citations?user=eBVRL_gAAAAJ&hl=en" target="_blank" class="btn btn-outline"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
                     <a href="https://www.researchgate.net/profile/Anas-M-Ali" target="_blank" class="btn btn-outline"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
-                    <a href="https://www.linkedin.com/in/anas-m-ali-ph-d-388164268/" target="_blank" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/anas-m-ali-388164268/" target="_blank" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                     <a href="https://github.com/AnasHXH" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
             </div>
             <div>
-                <!-- Make sure your picture is inside an 'img' folder named 'pic.jpg' -->
+                <!-- Profile Image -->
                 <img src="img/pic.jpg" alt="Dr. Anas M. Ali" class="profile-img">
             </div>
         </header>
@@ -420,6 +435,7 @@
         <!-- Achievements & Patents Section -->
         <section id="achievements">
             <h2>Honors & Patents</h2>
+            
             <div class="card">
                 <div class="card-header">
                     <div>
@@ -429,6 +445,18 @@
                     <span class="date-badge">2025</span>
                 </div>
                 <p style="font-size: 0.95rem; margin-top: 0.5rem;">Awarded 2nd place in the international NTIRE Challenge on Night Photography Rendering at IEEE/CVF CVPR 2025.</p>
+                <a href="https://www.linkedin.com/posts/anas-m-ali-ph-d-388164268_cvpr2025-ntire2025-imagerestoration-activity-7339175594351292416-kIsZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGEzxgBE5Ia52tWIO7_Di8TYaKVVs-lo6k" target="_blank" class="linkedin-link"><i class="fa-brands fa-linkedin"></i> View Certificate</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title"><i class="fa-solid fa-medal" style="color: #94a3b8;"></i> 2nd Place in ROSHN Hackathon</div>
+                        <div class="card-subtitle">Robotics & Internet-of-Things Lab | Prince Sultan University</div>
+                    </div>
+                </div>
+                <p style="font-size: 0.95rem; margin-top: 0.5rem;">Achieved 2nd place in the regional AI hackathon challenge organized by ROSHN.</p>
+                <a href="https://www.linkedin.com/posts/research-and-initiatives-center-ric-prince-sultan-university-b0b723243_%D8%A8%D9%83%D9%84-%D9%81%D8%AE%D8%B1-%D9%8A%D8%B3%D8%B1%D9%86%D8%A7-%D8%A7%D9%84%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D8%B9%D9%86-%D8%AA%D8%AD%D9%82%D9%8A%D9%82-%D9%85%D8%B9%D9%85%D9%84-%D8%A7%D9%84%D8%B1%D9%88%D8%A8%D9%88%D8%AA%D8%A7%D8%AA-activity-7398976328630202369-V-0I/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGEzxgBE5Ia52tWIO7_Di8TYaKVVs-lo6k" target="_blank" class="linkedin-link"><i class="fa-brands fa-linkedin"></i> View LinkedIn Announcement</a>
             </div>
 
             <div class="card">
@@ -514,6 +542,7 @@
                 </div>
                 <p style="font-size: 0.95rem; margin-top: 0.5rem;"><strong>Dissertation:</strong> "Optimized Algorithms for Multimedia Restoration in Computer Vision Applications"<br>
                 <em>Focus: Developing Multi-Attention Vision Transformers and Iterative Diffusion Models for high-fidelity multimedia restoration across RGB images, remote sensing satellite data, and clinical dermoscopic medical imaging.</em></p>
+                <a href="https://www.linkedin.com/posts/anas-m-ali-ph-d-388164268_phd-computervision-imagerestoration-activity-7449162341256085504-R1UC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGEzxgBE5Ia52tWIO7_Di8TYaKVVs-lo6k" target="_blank" class="linkedin-link"><i class="fa-brands fa-linkedin"></i> View Ph.D. Completion Post</a>
             </div>
 
             <div class="card">
