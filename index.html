@@ -351,12 +351,42 @@
             color: var(--primary-dark);
         }
 
-        /* Footer */
+        /* Footer & Visitor Counter Styles */
         footer {
             text-align: center;
             padding: 2.5rem 0;
             color: var(--text-light);
             font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .visitor-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: var(--bg-card);
+            padding: 0.6rem 1.25rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            font-size: 0.95rem;
+            color: var(--secondary);
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .visitor-box:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .visitor-box img {
+            display: block;
+            height: 20px;
         }
 
         /* Responsive Design */
@@ -690,6 +720,13 @@
 
     <!-- Footer -->
     <footer>
+        <!-- Visitor Counter Box -->
+        <div class="visitor-box">
+            <i class="fa-solid fa-chart-line" style="color: var(--primary);"></i>
+            <span>Page Views:</span>
+            <img src="https://api.visitorbadge.io/api/visitors?path=AnasHXH.github.io&countColor=%232563eb&style=flat" alt="Visitor Count">
+        </div>
+        
         <p>© 2026 Dr. Anas M. Ali. All rights reserved.</p>
     </footer>
 
