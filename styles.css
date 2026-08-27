@@ -55,11 +55,20 @@ section{padding:4rem 0;border-bottom:1px solid var(--line)}
 .pub-tools input,.pub-tools select{width:100%;min-height:44px;padding:.62rem .78rem;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font:inherit;font-size:.88rem}
 .pub-tools input:focus,.pub-tools select:focus{outline:3px solid #dbeafe;border-color:#93c5fd}
 .publication-list{display:grid;gap:.72rem}
-.publication{padding:1rem 1.05rem;display:grid;grid-template-columns:66px minmax(0,1fr) auto;align-items:center;gap:1rem;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:0 12px 12px 0;background:#fff}
+.publication{padding:1rem 1.05rem;display:grid;grid-template-columns:66px minmax(0,1fr) auto;align-items:start;gap:1rem;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:0 12px 12px 0;background:#fff}
 .pub-year{color:var(--blue);font-size:.88rem;font-weight:800}
+.pub-body{min-width:0}
+.apa-citation{color:var(--text);font-size:.9rem;line-height:1.65}
+.apa-authors{color:var(--ink);font-weight:650}
 .pub-title{color:var(--ink);font-size:.92rem;font-weight:650;line-height:1.45;text-decoration:none}
 .pub-title:hover{color:var(--blue)}
-.pub-meta{margin-top:.24rem;color:var(--muted);font-size:.76rem}
+.apa-citation em{font-weight:500}
+.doi-link{color:var(--blue);overflow-wrap:anywhere;text-decoration:none}
+.pub-meta{margin-top:.55rem;display:flex;align-items:center;flex-wrap:wrap;gap:.5rem .8rem;color:var(--muted);font-size:.76rem}
+.pub-meta a,.copy-citation{color:var(--blue);font:inherit;font-weight:650;text-decoration:none}
+.copy-citation{padding:0;border:0;background:none;cursor:pointer}
+.pub-kind{padding:.18rem .48rem;border-radius:999px;background:var(--soft);color:var(--blue-dark);font-weight:700}
+.publication-empty{padding:1.5rem;border:1px dashed var(--line);border-radius:12px;color:var(--muted);text-align:center;background:#fff}
 .cites{min-width:56px;padding:.3rem .52rem;border-radius:999px;background:var(--soft);color:var(--blue-dark);font-size:.7rem;font-weight:700;text-align:center}
 .pub-actions{margin-top:1.05rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .pub-actions span{color:var(--muted);font-size:.8rem}

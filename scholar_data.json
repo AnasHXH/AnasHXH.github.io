@@ -12,7 +12,7 @@
     {
       "title": "Robust Deepfake Detection, NTIRE 2026 Challenge: Report",
       "year": 2026,
-      "type": "Publication",
+      "type": "Preprint",
       "venue": "",
       "citedby": 44,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:ldfaerwXgEUC"
@@ -20,7 +20,7 @@
     {
       "title": "Ntire 2026 nighttime image dehazing challenge report",
       "year": 2026,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 44,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:ZHo1McVdvXMC"
@@ -28,7 +28,7 @@
     {
       "title": "The Fourth Challenge on Image Super-Resolution (x4) at NTIRE 2026: Benchmark Results and Method Overview",
       "year": 2026,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 44,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:SeFeTyx0c_EC"
@@ -36,7 +36,7 @@
     {
       "title": "Low Light Image Enhancement Challenge at NTIRE 2026",
       "year": 2026,
-      "type": "Publication",
+      "type": "Preprint",
       "venue": "",
       "citedby": 43,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:70eg2SAEIzsC"
@@ -44,7 +44,7 @@
     {
       "title": "NTIRE 2026 Challenge on Robust AI-Generated Image Detection in the Wild",
       "year": 2026,
-      "type": "Publication",
+      "type": "Preprint",
       "venue": "",
       "citedby": 43,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:RYcK_YlVTxYC"
@@ -52,7 +52,7 @@
     {
       "title": "NTIRE 2026 The Second Challenge on Day and Night Raindrop Removal for Dual-Focused Images: Methods and Results",
       "year": 2026,
-      "type": "Publication",
+      "type": "Preprint",
       "venue": "",
       "citedby": 41,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:vV6vV6tmYwMC"
@@ -60,7 +60,7 @@
     {
       "title": "NTIRE 2026 Challenge on Learned Smartphone ISP with Unpaired Data: Methods and Results",
       "year": 2026,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 41,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:pqnbT2bcN3wC"
@@ -68,7 +68,7 @@
     {
       "title": "Advances in Single-Image Shadow Removal: Results from the NTIRE 2026 Challenge",
       "year": 2026,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 40,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:3s1wT3WcHBgC"
@@ -76,7 +76,7 @@
     {
       "title": "NTIRE 2026 Challenge on Single Image Reflection Removal in the Wild: Datasets, Results, and Methods",
       "year": 2026,
-      "type": "Publication",
+      "type": "Preprint",
       "venue": "",
       "citedby": 39,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:lSLTfruPkqcC"
@@ -84,7 +84,7 @@
     {
       "title": "NTIRE 2026 Low-light Enhancement: Twilight Cowboy Challenge",
       "year": 2026,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 37,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:g5m5HwL7SMYC"
@@ -92,7 +92,7 @@
     {
       "title": "NTIRE 2026 Challenge on Efficient Burst HDR and Restoration: Datasets, Methods, and Results",
       "year": 2026,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 37,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:HoB7MX3m0LUC"
@@ -100,23 +100,23 @@
     {
       "title": "Fusing LLMs and diffusion models: A comprehensive survey of progress, challenges, and future directions in generative AI",
       "year": 2026,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Computer Science Review",
       "citedby": 3,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:NaGl4SEjCO4C"
     },
     {
       "title": "Small Language Models for On-Device IoT Intelligence: A Survey on Architectures, Optimization, and Deployment",
       "year": 2026,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Internet of Things",
       "citedby": 0,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:rO6llkc54NcC"
     },
     {
       "title": "The Third Challenge on Image Denoising at NTIRE 2026: Methods and Results",
       "year": 2026,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 0,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:zA6iFVUQeVQC"
@@ -124,15 +124,15 @@
     {
       "title": "Guided Frequency Loss for Multimedia Image Enhancement and Restoration",
       "year": 2026,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Results in Engineering",
       "citedby": 0,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:M05iB0D1s5AC"
     },
     {
       "title": "The Fourth Challenge on Image Super-Resolution (4) at NTIRE 2026: Benchmark Results and Method Overview",
       "year": 2026,
-      "type": "Publication",
+      "type": "Preprint",
       "venue": "",
       "citedby": 0,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:35N4QoGY0k4C"
@@ -140,7 +140,7 @@
     {
       "title": "The tenth ntire 2025 image denoising challenge report",
       "year": 2025,
-      "type": "Publication",
+      "type": "Preprint",
       "venue": "",
       "citedby": 46,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:j3f4tGmQtD8C"
@@ -148,7 +148,7 @@
     {
       "title": "NTIRE 2025 challenge on single image reflection removal in the wild: Datasets, methods and results",
       "year": 2025,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 46,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:TFP_iSt0sucC"
@@ -156,7 +156,7 @@
     {
       "title": "NTIRE 2025 ambient lighting normalization challenge report",
       "year": 2025,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 30,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:isC4tDSrTZIC"
@@ -164,47 +164,47 @@
     {
       "title": "Prompting Robotic Modalities (PRM): A structured architecture for centralizing language models in complex systems",
       "year": 2025,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Future Generation Computer Systems",
       "citedby": 23,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:QIV2ME_5wuYC"
     },
     {
       "title": "Dehazing-DiffGAN: Sequential fusion of diffusion models and GANs for high-fidelity remote sensing image dehazing",
       "year": 2025,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "IEEE TGRS",
       "citedby": 12,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:hMod-77fHWUC"
     },
     {
       "title": "Clear-net: A cascaded local and external attention network for enhanced dehazing of remote sensing images",
       "year": 2025,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "IEEE JSTARS",
       "citedby": 7,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:7PzlFSSx8tAC"
     },
     {
       "title": "H-fusion SEG: dual-branch hyper-attention fusion network with SAM integration for robust skin disease segmentation",
       "year": 2025,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Scientific Reports",
       "citedby": 5,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:GnPB-g6toBAC"
     },
     {
       "title": "Perceptual dehazing of remote sensing images using global attention and Laplacian-Guided GANs for environmental applications",
       "year": 2025,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Ecological Informatics",
       "citedby": 4,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:RGFaLdJalmkC"
     },
     {
       "title": "Dual-stage global and local feature framework for image dehazing",
       "year": 2025,
-      "type": "Publication",
+      "type": "Chapter",
       "venue": "",
       "citedby": 1,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:blknAaTinKkC"
@@ -212,15 +212,15 @@
     {
       "title": "SSVA: Self-scanned visual attention for enhanced mask-free shadow removal",
       "year": 2025,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Expert Systems with Applications",
       "citedby": 0,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:J_g5lzvAfSwC"
     },
     {
       "title": "GridFormer-VSR: A Multi-Attention Vision Transformer for Video Super-Resolution",
       "year": 2025,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 0,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:ns9cj8rnVeAC"
@@ -228,7 +228,7 @@
     {
       "title": "Diffusion Models in a Nutshell: A Tutorial",
       "year": 2025,
-      "type": "Publication",
+      "type": "Chapter",
       "venue": "",
       "citedby": 0,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:JV2RwH3_ST0C"
@@ -236,7 +236,7 @@
     {
       "title": "Integrating Large Language Models and Diffusion Models in Generative AI Tasks: Progress, Challenges, and Future Directions",
       "year": 2025,
-      "type": "Publication",
+      "type": "Preprint",
       "venue": "",
       "citedby": 0,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:ZeXyd9-uunAC"
@@ -244,7 +244,7 @@
     {
       "title": "NTIRE 2024 image shadow removal challenge report",
       "year": 2024,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 106,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:YOwf2qJgpHMC"
@@ -252,79 +252,79 @@
     {
       "title": "Traditional and deep-learning-based denoising methods for medical images",
       "year": 2024,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Multimedia Tools and Applications",
       "citedby": 58,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:ufrVoPGSRksC"
     },
     {
       "title": "Automatic modulation recognition using CNN deep learning models",
       "year": 2024,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Multimedia Tools and Applications",
       "citedby": 53,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:4DMP91E08xMC"
     },
     {
       "title": "Efficient classification of different medical image multimodalities based on simple CNN architecture and augmentation algorithms",
       "year": 2024,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Journal of Optics",
       "citedby": 27,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:WF5omc3nYNoC"
     },
     {
       "title": "Single image super-resolution approaches in medical images based-deep learning: a survey",
       "year": 2024,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Multimedia Tools and Applications",
       "citedby": 27,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:u5HHmVD_uO8C"
     },
     {
       "title": "DiffPlate: A diffusion model for super-resolution of license plate images",
       "year": 2024,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Electronics",
       "citedby": 20,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:Wp0gIr-vW9MC"
     },
     {
       "title": "DM–AHR: A Self-Supervised Conditional Diffusion Model for AI-Generated Hairless Imaging for Enhanced Skin Diagnosis Applications",
       "year": 2024,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Cancers",
       "citedby": 10,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:aqlVkmm33-oC"
     },
     {
       "title": "Vision transformers in image restoration: A survey",
       "year": 2023,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Sensors",
       "citedby": 194,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:d1gkVwhDpl0C"
     },
     {
       "title": "Brain tumor classification using hybrid single image super-resolution technique with ResNext101_32× 8d and VGG19 pre-trained models",
       "year": 2023,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "IEEE Access",
       "citedby": 88,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:M3ejUd6NZC8C"
     },
     {
       "title": "TESR: two-stage approach for enhancement and super-resolution of remote sensing images",
       "year": 2023,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Remote Sensing",
       "citedby": 58,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:UeHWp8X0CEIC"
     },
     {
       "title": "Ntire 2023 hr nonhomogeneous dehazing challenge report",
       "year": 2023,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 42,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:Y0pCki6q_DkC"
@@ -332,15 +332,15 @@
     {
       "title": "Deep-learning-based super-resolution and classification framework for skin disease detection applications",
       "year": 2023,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Optical and Quantum Electronics",
       "citedby": 27,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:9yKSN-GCB0IC"
     },
     {
       "title": "Streamlined global and local features combinator (SGLC) for high resolution image dehazing",
       "year": 2023,
-      "type": "Publication",
+      "type": "Preprint",
       "venue": "",
       "citedby": 22,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:u-x6o8ySG0sC"
@@ -348,7 +348,7 @@
     {
       "title": "Modulation format recognition using CNN-based transfer learning models",
       "year": 2023,
-      "type": "Publication",
+      "type": "Preprint",
       "venue": "",
       "citedby": 10,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:Tyk-4Ss8FVUC"
@@ -356,7 +356,7 @@
     {
       "title": "Guided frequency loss for image restoration",
       "year": 2023,
-      "type": "Publication",
+      "type": "Article",
       "venue": "",
       "citedby": 9,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:_FxGoFyzp5QC"
@@ -364,7 +364,7 @@
     {
       "title": "Enhancing dermoscopic skin cancer detection via hair artifact removal: an iterative diffusion model approach",
       "year": 2023,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 5,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:9ZlFYXVOiuMC"
@@ -372,47 +372,47 @@
     {
       "title": "Hybrid of Distributed Cumulative Histograms and Classification Model for Attack Detection.",
       "year": 2023,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Computer Systems Science and Engineering",
       "citedby": 4,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:zYLM7Y9cAGgC"
     },
     {
       "title": "Efficient deep-learning-based autoencoder denoising approach for medical image diagnosis",
       "year": 2022,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Computers, Materials & Continua",
       "citedby": 108,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:2osOgNQ5qMEC"
     },
     {
       "title": "Deep cnn model for multimodal medical image denoising",
       "year": 2022,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Computers, Materials & Continua",
       "citedby": 35,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:W7OEmFMy1HYC"
     },
     {
       "title": "Hybrid single image super-resolution algorithm for medical images",
       "year": 2022,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Computers, Materials & Continua",
       "citedby": 20,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:qjMakFHDy7sC"
     },
     {
       "title": "Automated COVID-19 detection based on single-image super-resolution and CNN models",
       "year": 2021,
-      "type": "Publication",
-      "venue": "",
+      "type": "Article",
+      "venue": "Computers, Materials & Continua",
       "citedby": 16,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:IjCSPb-OGe4C"
     },
     {
       "title": "Dual-Stage Global and Local Feature Framework for Image Super-Resolution",
       "year": null,
-      "type": "Publication",
+      "type": "Article",
       "venue": "",
       "citedby": 0,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:2P1L_qKh6hAC"
@@ -420,7 +420,7 @@
     {
       "title": "NTIRE 2025 Challenge on Single Image Reflection Removal in the Wild: Supplementary Material",
       "year": null,
-      "type": "Publication",
+      "type": "Conference Paper",
       "venue": "",
       "citedby": 0,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:k_IJM867U9cC"

@@ -104,12 +104,12 @@
 
     <section id="publications">
       <header class="section-head split">
-        <div><small>Complete record</small><h2>Publications & Research Outputs</h2><p>Search all public research outputs. The cached list is replaced after a successful Scholar refresh.</p></div>
+        <div><small>Complete record</small><h2>Publications & Research Outputs</h2><p>Browse APA-style references, search by author, title, year, venue, or topic, and open each paper on Google Scholar.</p></div>
         <a class="button" href="https://scholar.google.com/citations?user=eBVRL_gAAAAJ&hl=en" target="_blank" rel="noopener">Full Scholar profile ↗</a>
       </header>
       <div class="pub-tools">
-        <input id="publication-search" type="search" placeholder="Search by title, year, or topic…" aria-label="Search publications">
-        <select id="publication-type" aria-label="Filter by publication type"><option value="all">All output types</option><option value="article">Articles</option><option value="conference paper">Conference papers</option><option value="chapter">Book chapters</option><option value="preprint">Preprints</option></select>
+        <input id="publication-search" type="search" placeholder="Search author, title, year, venue, or topic…" aria-label="Search publications">
+        <select id="publication-type" aria-label="Filter by publication type"><option value="all">All publication types</option><option value="article" data-label="Journal articles">Journal articles</option><option value="conference paper" data-label="Conference papers">Conference papers</option><option value="chapter" data-label="Book chapters">Book chapters</option><option value="preprint" data-label="Preprints">Preprints</option></select>
       </div>
       <div id="publication-list" class="publication-list" aria-live="polite"></div>
       <div class="pub-actions"><span id="publication-results"></span><button id="show-all-publications" class="button" type="button">Show all publications</button></div>
