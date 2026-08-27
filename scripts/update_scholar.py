@@ -119,8 +119,9 @@ def simplify(author: dict) -> dict:
     previous = cached_records()
     records = []
     openalex_enabled = True
+    openalex_budget = 8  # Enrich a small batch per run to keep scheduled jobs fast and reliable.
     headers = {"User-Agent": "AnasHXH-academic-portfolio/1.0"}
-    with httpx.Client(timeout=12, follow_redirects=True, headers=headers) as client:
+    with httpx.Client(timeout=6, follow_redirects=True, headers=headers) as client:
         for publication in author.get("publications", []):
             bib = publication.get("bib", {})
             title = first_value(bib, "title")
@@ -143,7 +144,8 @@ def simplify(author: dict) -> dict:
             venue = first_value(bib, "citation", "venue", "journal", "conference", "booktitle", "publisher") or cached.get("venue", "")
             doi = first_value(bib, "doi") or cached.get("doi", "")
             metadata = {}
-            if openalex_enabled and (not authors or not venue or not doi):
+            if openalex_enabled and openalex_budget > 0 and (not authors or not venue or not doi):
+                openalex_budget -= 1
                 try:
                     metadata = openalex_metadata(client, title)
                 except (httpx.HTTPError, ValueError):
