@@ -11,21 +11,16 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import httpx
-from scholarly import ProxyGenerator, scholarly
+from scholarly import scholarly
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "scholar_data.json"
 AUTHOR_ID = os.environ.get("GOOGLE_SCHOLAR_ID", "eBVRL_gAAAAJ")
 
 
-def fetch(use_proxy: bool = False) -> dict:
+def fetch() -> dict:
     scholarly.set_timeout(20)
     scholarly.set_retries(1)
-    if use_proxy:
-        proxy = ProxyGenerator()
-        if not proxy.FreeProxies():
-            raise RuntimeError("No working free proxy")
-        scholarly.use_proxy(proxy)
     author = scholarly.search_author_id(AUTHOR_ID)
     return scholarly.fill(author, sections=["basics", "indices", "counts", "publications"])
 
@@ -182,19 +177,15 @@ def simplify(author: dict) -> dict:
 
 
 def main() -> int:
-    errors = []
-    for use_proxy in (False, True):
-        try:
-            data = simplify(fetch(use_proxy))
-            if not data["publications"] or not data["metrics"]["hindex"]:
-                raise RuntimeError("Scholar returned incomplete data")
-            OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            print(f"Updated {OUTPUT.name} with {len(data['publications'])} publications")
-            return 0
-        except Exception as exc:  # Scholar frequently rate-limits cloud runners.
-            errors.append(f"{'proxy' if use_proxy else 'direct'}: {exc}")
-    print("Scholar refresh skipped; preserving the existing cache.", file=sys.stderr)
-    print(" | ".join(errors), file=sys.stderr)
+    try:
+        data = simplify(fetch())
+        if not data["publications"] or not data["metrics"]["hindex"]:
+            raise RuntimeError("Scholar returned incomplete data")
+        OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"Updated {OUTPUT.name} with {len(data['publications'])} publications")
+    except Exception as exc:  # Scholar frequently rate-limits cloud runners.
+        print("Scholar refresh skipped; preserving the existing cache.", file=sys.stderr)
+        print(f"direct: {exc}", file=sys.stderr)
     return 0
 
 
