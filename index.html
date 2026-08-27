@@ -1,734 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Anas M. Ali | AI & Computer Vision Researcher</title>
-    <!-- Google Fonts & FontAwesome for Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #0f172a;
-            --text-main: #334155;
-            --text-light: #64748b;
-            --bg-body: #f8fafc;
-            --bg-card: #ffffff;
-            --border: #e2e8f0;
-            --radius: 12px;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border);
-            padding: 1rem 0;
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--secondary);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 220px; /* Reduced to make the image smaller */
-            gap: 3rem;
-            align-items: center;
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .hero-text h1 {
-            font-size: 2.75rem;
-            color: var(--secondary);
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero-text .subtitle {
-            font-size: 1.25rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .hero-text p {
-            color: var(--text-light);
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .profile-img {
-            width: 100%;
-            height: 195px; /* Reduced to match the grid column */
-            object-fit: cover;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-lg);
-            border: 4px solid var(--bg-card);
-        }
-
-        /* Badges / Stats */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .stat-card {
-            background: var(--bg-card);
-            padding: 1.25rem;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            text-align: center;
-            box-shadow: var(--shadow);
-        }
-
-        .stat-card h3 {
-            font-size: 1.75rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .stat-card p {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Social Links Button Bar */
-        .social-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .btn-outline {
-            background-color: var(--bg-card);
-            color: var(--secondary);
-            border: 1px solid var(--border);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        /* Section Layouts */
-        section {
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        section h2 {
-            font-size: 1.75rem;
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        section h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--primary);
-            border-radius: 2px;
-        }
-
-        /* Cards */
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            margin-bottom: 1.25rem;
-            box-shadow: var(--shadow);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 0.5rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .card-title {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--secondary);
-        }
-
-        .card-subtitle {
-            color: var(--primary);
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .date-badge {
-            background: #eff6ff;
-            color: var(--primary-dark);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .linkedin-link {
-            color: var(--primary); 
-            text-decoration: none; 
-            font-weight: 500; 
-            font-size: 0.9rem; 
-            display: inline-block; 
-            margin-top: 0.75rem;
-            transition: color 0.2s;
-        }
-        
-        .linkedin-link:hover {
-            color: var(--primary-dark);
-            text-decoration: underline;
-        }
-
-        ul.styled-list {
-            list-style: none;
-            margin-top: 0.75rem;
-        }
-
-        ul.styled-list li {
-            position: relative;
-            padding-left: 1.25rem;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-            color: var(--text-main);
-        }
-
-        ul.styled-list li::before {
-            content: '•';
-            color: var(--primary);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        /* Skills Tags */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .skill-tag {
-            background: #f1f5f9;
-            color: var(--secondary);
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid #e2e8f0;
-        }
-
-        /* Publications */
-        .pub-category {
-            font-size: 1.1rem;
-            color: var(--secondary);
-            margin: 1.5rem 0 0.75rem 0;
-            font-weight: 600;
-        }
-
-        .pub-item {
-            background: var(--bg-card);
-            padding: 1rem;
-            border-left: 4px solid var(--primary);
-            margin-bottom: 0.75rem;
-            border-radius: 0 var(--radius) var(--radius) 0;
-            border-top: 1px solid var(--border);
-            border-right: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            font-size: 0.95rem;
-        }
-
-        .pub-item span.journal {
-            font-weight: 600;
-            color: var(--primary-dark);
-        }
-
-        /* Footer & Visitor Counter Styles */
-        footer {
-            text-align: center;
-            padding: 2.5rem 0;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .visitor-box {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            background: var(--bg-card);
-            padding: 0.6rem 1.25rem;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            font-size: 0.95rem;
-            color: var(--secondary);
-            font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .visitor-box:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .visitor-box img {
-            display: block;
-            height: 20px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .hero-text h1 { font-size: 2.2rem; }
-            .profile-img { max-width: 200px; margin: 0 auto; }
-            .social-bar { justify-content: center; }
-            .nav-links { display: none; } /* Simplified for mobile */
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Dr. Anas M. Ali — AI research scientist in computer vision, generative AI, image restoration, remote sensing, and medical imaging. Open to postdoctoral opportunities.">
+  <meta name="author" content="Dr. Anas M. Ali">
+  <meta property="og:title" content="Dr. Anas M. Ali | AI Research Scientist">
+  <meta property="og:description" content="Postdoctoral researcher candidate working in computer vision, generative AI, image restoration, remote sensing, and medical imaging.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://anashxh.github.io/img/pic.jpg">
+  <title>Dr. Anas M. Ali | AI Research Scientist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Dr. Anas M. Ali</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#skills">Skills</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-        <!-- Hero Section -->
-        <header class="hero" id="about">
-            <div class="hero-text">
-                <h1>Dr. Anas M. Ali</h1>
-                <div class="subtitle">Assistant Professor & AI Researcher</div>
-                <p>Rigorous AI researcher and Ph.D. graduate specializing in generative modeling architectures (Diffusion Models, GANs, Vision Transformers) for computer vision, remote sensing, and robotics integration.</p>
-                
-                <!-- Social Bar -->
-                <div class="social-bar">
-                    <a href="mailto:aaboessa@psu.edu.sa" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email Me</a>
-                    <a href="https://scholar.google.com/citations?user=eBVRL_gAAAAJ&hl=en" target="_blank" class="btn btn-outline"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
-                    <a href="https://www.researchgate.net/profile/Anas-M-Ali" target="_blank" class="btn btn-outline"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
-                    <a href="https://www.linkedin.com/in/anas-m-ali-388164268/" target="_blank" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://github.com/AnasHXH" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
-                </div>
-            </div>
-            <div>
-                <!-- Profile Image -->
-                <img src="img/pic.jpg" alt="Dr. Anas M. Ali" class="profile-img">
-            </div>
-        </header>
-
-        <!-- Metrics & Stats -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <h3>35+</h3>
-                <p>Peer-Reviewed Publications</p>
-            </div>
-            <div class="stat-card">
-                <h3>25</h3>
-                <p>H-index (ResearchGate)</p>
-            </div>
-            <div class="stat-card">
-                <h3>25</h3>
-                <p>H-index (Google Scholar)</p>
-            </div>
-            <div class="stat-card">
-                <h3>Runner-Up</h3>
-                <p>CVPR 2025 NTIRE Challenge</p>
-            </div>
-        </div>
-
-        <!-- Achievements & Patents Section -->
-        <section id="achievements">
-            <h2>Honors & Patents</h2>
-            
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title"><i class="fa-solid fa-award" style="color: #f59e0b;"></i> CVPR 2025 NTIRE Challenge Runner-Up Award</div>
-                        <div class="card-subtitle">New Trends in Image Restoration and Enhancement Workshop, Nashville, USA</div>
-                    </div>
-                    <span class="date-badge">2025</span>
-                </div>
-                <p style="font-size: 0.95rem; margin-top: 0.5rem;">Awarded 2nd place in the international NTIRE Challenge on Night Photography Rendering at IEEE/CVF CVPR 2025.</p>
-                <a href="https://www.linkedin.com/posts/anas-m-ali-ph-d-388164268_cvpr2025-ntire2025-imagerestoration-activity-7339175594351292416-kIsZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGEzxgBE5Ia52tWIO7_Di8TYaKVVs-lo6k" target="_blank" class="linkedin-link"><i class="fa-brands fa-linkedin"></i> View Certificate</a>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title"><i class="fa-solid fa-medal" style="color: #94a3b8;"></i> 2nd Place in ROSHN Hackathon</div>
-                        <div class="card-subtitle">Robotics & Internet-of-Things Lab | Prince Sultan University</div>
-                    </div>
-                </div>
-                <p style="font-size: 0.95rem; margin-top: 0.5rem;">Achieved 2nd place in the regional AI hackathon challenge organized by ROSHN.</p>
-                <a href="https://www.linkedin.com/posts/research-and-initiatives-center-ric-prince-sultan-university-b0b723243_%D8%A8%D9%83%D9%84-%D9%81%D8%AE%D8%B1-%D9%8A%D8%B3%D8%B1%D9%86%D8%A7-%D8%A7%D9%84%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D8%B9%D9%86-%D8%AA%D8%AD%D9%82%D9%8A%D9%82-%D9%85%D8%B9%D9%85%D9%84-%D8%A7%D9%84%D8%B1%D9%88%D8%A8%D9%88%D8%AA%D8%A7%D8%AA-activity-7398976328630202369-V-0I/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGEzxgBE5Ia52tWIO7_Di8TYaKVVs-lo6k" target="_blank" class="linkedin-link"><i class="fa-brands fa-linkedin"></i> View LinkedIn Announcement</a>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title"><i class="fa-solid fa-certificate" style="color: var(--primary);"></i> Registered Software Copyright (SAIP Patent)</div>
-                        <div class="card-subtitle">Saudi Authority for Intellectual Property</div>
-                    </div>
-                </div>
-                <p style="font-size: 0.95rem; margin-top: 0.5rem;"><strong>Title:</strong> Dual-Branch Attention Network for Dynamic Illumination Enhancement in Nighttime Images.</p>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title"><i class="fa-solid fa-trophy" style="color: #10b981;"></i> SDAIA Scientific Contribution Award</div>
-                        <div class="card-subtitle">Saudi Data and AI Authority</div>
-                    </div>
-                </div>
-                <p style="font-size: 0.95rem; margin-top: 0.5rem;">Awarded for exceptional scientific contributions and advancements in Artificial Intelligence research.</p>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience">
-            <h2>Academic & Research Experience</h2>
-            
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title">Research Assistant</div>
-                        <div class="card-subtitle">Robotics & Internet-of-Things Lab | Prince Sultan University, Riyadh</div>
-                    </div>
-                    <span class="date-badge">Sept 2022 - Present</span>
-                </div>
-                <ul class="styled-list">
-                    <li>Spearheaded the development of generative diffusion models for image restoration, aligning directly with translational research goals.</li>
-                    <li>Co-supervised junior researchers and graduate students in developing AI pipelines and maintaining rigorous evaluation standards.</li>
-                    <li>Published 35+ papers and achieved top rankings in international benchmarks (CVPR NTIRE Challenges).</li>
-                    <li>Created robotic applications with ROS2 and Large Language Models (ROSGPT Vision), integrating multi-modal sensing for real-time decision-making.</li>
-                    <li><strong>Teaching:</strong> Generative AI (CS489 - 4th Year) & Digital Logic Design (CS175 - 1st Year). Developed comprehensive digital learning resources including a dedicated coding tutorial YouTube channel.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title">Lecturer & Teaching Assistant</div>
-                        <div class="card-subtitle">Alexandria Higher Institute of Engineering and Technology (AIET), Egypt</div>
-                    </div>
-                    <span class="date-badge">2018 - 2022</span>
-                </div>
-                <ul class="styled-list">
-                    <li>Delivered lectures and managed laboratory sessions across Image Processing (ECE454), Digital Signal Processing (ECE355), Computer Programming (CE002), and VLSI Fabrication/Design (ECE442).</li>
-                    <li>Developed advanced deep learning techniques for image restoration and super-resolution while mentoring a diverse undergraduate student body.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title">Assistant Lecturer (Part-time)</div>
-                        <div class="card-subtitle">Egyptian Air Defense College, Egypt</div>
-                    </div>
-                    <span class="date-badge">2019 - 2022</span>
-                </div>
-                <ul class="styled-list">
-                    <li>Instructed Electromagnetic Waves I & II for second-year engineering students, emphasizing the integration of fundamental physics with AI-driven data processing and algorithmic problem-solving.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title">Ph.D. in Electronics and Communications Engineering</div>
-                        <div class="card-subtitle">Menofia University, Egypt</div>
-                    </div>
-                    <span class="date-badge">2023 - 2026</span>
-                </div>
-                <p style="font-size: 0.95rem; margin-top: 0.5rem;"><strong>Dissertation:</strong> "Optimized Algorithms for Multimedia Restoration in Computer Vision Applications"<br>
-                <em>Focus: Developing Multi-Attention Vision Transformers and Iterative Diffusion Models for high-fidelity multimedia restoration across RGB images, remote sensing satellite data, and clinical dermoscopic medical imaging.</em></p>
-                <a href="https://www.linkedin.com/posts/anas-m-ali-ph-d-388164268_phd-computervision-imagerestoration-activity-7449162341256085504-R1UC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGEzxgBE5Ia52tWIO7_Di8TYaKVVs-lo6k" target="_blank" class="linkedin-link"><i class="fa-brands fa-linkedin"></i> View Ph.D. Completion Post</a>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title">M.S. in Electronics and Communications Engineering</div>
-                        <div class="card-subtitle">Menofia University, Egypt</div>
-                    </div>
-                    <span class="date-badge">2019 - 2021</span>
-                </div>
-                <p style="font-size: 0.95rem; margin-top: 0.5rem;"><strong>Thesis:</strong> "Utilization of Deep Learning Techniques for Efficient Medical Images Super Resolution"</p>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title">B.S. in Electronics and Communications Engineering</div>
-                        <div class="card-subtitle">Alexandria Higher Institute of Engineering and Technology, Egypt</div>
-                    </div>
-                    <span class="date-badge">2011 - 2016</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects Section -->
-        <section id="projects">
-            <h2>Featured Research Projects</h2>
-            
-            <div class="card">
-                <div class="card-title">Prompting Robotic Modalities (PRM)</div>
-                <p style="font-size: 0.95rem; margin-top: 0.5rem;">A modular framework integrating Large Language Models (LLMs) with multimodal sensing (audio, vision, and actuator data). Designed for robotic control and highly effective for human action recognition in healthcare. Emphasizes compact prompt-to-action pipelines and real-time human-AI collaboration.</p>
-                <div style="margin-top: 0.75rem;">
-                    <span class="date-badge" style="background: #f1f5f9; color: var(--secondary);">Published in Future Generation Computer Systems (Q1)</span>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Diffusion & Self-Supervised Models for Generative Perception</div>
-                <p style="font-size: 0.95rem; margin-top: 0.5rem;">Efficient architectures for medical image enhancement, lesion detection, and cancer diagnosis utilizing diffusion modeling and transformer architectures under limited clinical data.</p>
-                <ul class="styled-list">
-                    <li><strong>DM-AHR:</strong> Self-supervised conditional diffusion model for generating hairless dermoscopic images to enhance skin lesion visibility (Published in Cancers Q1).</li>
-                    <li><strong>TESR:</strong> Two-stage diffusion-enhanced architecture for super-resolution of remote sensing imagery under limited training samples (Published in Remote Sensing Q1).</li>
-                    <li><strong>CLEAR-Net:</strong> Cascaded transformer model combining local and global attention for image dehazing in adverse environments (Published in IEEE JSTARS Q1).</li>
-                    <li><strong>DiffPlate:</strong> Compact diffusion-based super-resolution model for low-quality license plates optimized for mobile/edge deployment.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Publications Section -->
-        <section id="publications">
-            <h2>Selected Publications (35+ Total)</h2>
-            
-            <div class="pub-category">Image Restoration, Low-Level Vision & Remote Sensing</div>
-            <div class="pub-item">
-                Anas M. Ali, Benjdira, B., Boulila, W., & Koubaa, A. "Dehazing-DiffGAN: Sequential Fusion of Diffusion Models and GANs for High-Fidelity Remote Sensing Image Dehazing." <span class="journal">IEEE Transactions on Geoscience and Remote Sensing (Q1, IF: 8.6)</span>.
-            </div>
-            <div class="pub-item">
-                Anas M. Ali, Benjdira, B., & Boulila, W. "Perceptual dehazing of remote sensing images using global attention and Laplacian-Guided GANs for environmental applications." <span class="journal">Ecological Informatics (Q1, IF: 7.3)</span>.
-            </div>
-            <div class="pub-item">
-                Anas M. Ali, El-Rabaie, E. S. M., Ramadan, K. F., Abd El-Samie, F. E., & El-Shafai, W. "CLEAR-Net: A Cascaded Local and External Attention Network for Enhanced Dehazing of Remote Sensing Images." <span class="journal">IEEE JSTARS (Q1)</span>.
-            </div>
-            <div class="pub-item">
-                Anas M. Ali, Benjdira, B., Koubaa, A., El-Shafai, W., Khan, Z., & Boulila, W. "Vision transformers in image restoration: A survey." <span class="journal">Sensors (Q1)</span>.
-            </div>
-            <div class="pub-item">
-                Anas M. Ali, Benjdira, B., Koubaa, A., Boulila, W., & El-Shafai, W. "TESR: Two-Stage Approach for Super-Resolution in Remote Sensing." <span class="journal">Remote Sensing (Q1)</span>.
-            </div>
-
-            <div class="pub-category">Robotics, Multimodal AI & Medical Imaging</div>
-            <div class="pub-item">
-                Benjdira, B., Koubaa, A., & Anas M. Ali. "Prompting Robotic Modalities (PRM): A structured architecture for centralizing language models in complex systems." <span class="journal">Future Generation Computer Systems (Q1, IF: 6.2)</span>.
-            </div>
-            <div class="pub-item">
-                Benjdira, B., Anas M. Ali, Boulila, W., & Koubaa, A. "Fusing LLMs and diffusion models: A comprehensive survey of progress, challenges, and future directions in generative AI." <span class="journal">Computer Science Review (Q1, IF: 12.7)</span>.
-            </div>
-            <div class="pub-item">
-                El-Shafai, W., Anas M. Ali, Alzaben, N., & El-Fattah, I. A. "H-fusion SEG: dual-branch hyper-attention fusion network with SAM integration for robust skin disease segmentation." <span class="journal">Scientific Reports (Q1, IF: 3.9)</span>.
-            </div>
-            <div class="pub-item">
-                Benjdira, B., Anas M. Ali, Koubaa, A., Ammar, A., & Boulila, W. "Dm-ahr: A self-supervised conditional diffusion model for ai-generated hairless imaging for enhanced skin diagnosis applications." <span class="journal">Cancers (Q1)</span>.
-            </div>
-        </section>
-
-        <!-- Technical Skills Section -->
-        <section id="skills">
-            <h2>Technical Competencies</h2>
-            <div class="card">
-                <div class="card-title" style="margin-bottom: 0.5rem;">Generative AI & Modeling</div>
-                <div class="skills-container">
-                    <span class="skill-tag">Diffusion Models (DDPM, Latent Diffusion)</span>
-                    <span class="skill-tag">Generative Adversarial Networks (GANs)</span>
-                    <span class="skill-tag">Vision Transformers (ViT)</span>
-                    <span class="skill-tag">Self-Supervised Learning</span>
-                    <span class="skill-tag">Large Language Models (LLMs)</span>
-                </div>
-
-                <div class="card-title" style="margin: 1rem 0 0.5rem 0;">Programming & Development Tools</div>
-                <div class="skills-container">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">TensorFlow</span>
-                    <span class="skill-tag">ROS2 / ROSGPT</span>
-                    <span class="skill-tag">MATLAB</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Git / GitHub</span>
-                    <span class="skill-tag">Linux Server Admin</span>
-                    <span class="skill-tag">High-Performance Computing (HPC)</span>
-                    <span class="skill-tag">LaTeX</span>
-                </div>
-
-                <div class="card-title" style="margin: 1rem 0 0.5rem 0;">Medical & Remote Sensing Imaging</div>
-                <div class="skills-container">
-                    <span class="skill-tag">2D Medical Image Segmentation</span>
-                    <span class="skill-tag">Lesion Detection & Denoising (MRI/CT/Dermoscopy)</span>
-                    <span class="skill-tag">Satellite Image Dehazing</span>
-                    <span class="skill-tag">Super-Resolution</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- References Section -->
-        <section id="references">
-            <h2>Academic References</h2>
-            <div class="stats-grid">
-                <div class="stat-card" style="text-align: left;">
-                    <div style="font-weight: 700; color: var(--secondary); font-size: 1.05rem;">Prof. Anis Koubaa</div>
-                    <p style="text-transform: none; color: var(--text-main); margin: 0.25rem 0;">Professor, Alfaisal University<br>Executive Director of Innovation Center, Prince Sultan University</p>
-                    <a href="mailto:akoubaa@psu.edu.sa" style="color: var(--primary); font-size: 0.85rem; text-decoration: none;">akoubaa@psu.edu.sa</a>
-                </div>
-                <div class="stat-card" style="text-align: left;">
-                    <div style="font-weight: 700; color: var(--secondary); font-size: 1.05rem;">Prof. Fathi E. Abd El-Samie</div>
-                    <p style="text-transform: none; color: var(--text-main); margin: 0.25rem 0;">Professor, Menoufia University<br>Princess Nourah bint Abdulrahman University</p>
-                    <a href="mailto:fathi_sayed@yahoo.com" style="color: var(--primary); font-size: 0.85rem; text-decoration: none;">fathi_sayed@yahoo.com</a>
-                </div>
-                <div class="stat-card" style="text-align: left;">
-                    <div style="font-weight: 700; color: var(--secondary); font-size: 1.05rem;">Prof. Moustafa H. Aly</div>
-                    <p style="text-transform: none; color: var(--text-main); margin: 0.25rem 0;">Dean, Arab Academy for Science, Technology & Maritime</p>
-                    <a href="mailto:mosaly@aast.edu" style="color: var(--primary); font-size: 0.85rem; text-decoration: none;">mosaly@aast.edu</a>
-                </div>
-            </div>
-        </section>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="logo" href="#about">Dr. Anas M. Ali</a>
+      <ul><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#research">Research</a></li><li><a href="#publications">Publications</a></li><li><a href="#skills">Skills</a></li></ul>
     </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer>
-        <!-- Visitor Counter Box -->
-        <div class="visitor-box">
-            <i class="fa-solid fa-chart-line" style="color: var(--primary);"></i>
-            <span>Page Views:</span>
-            <img src="https://api.visitorbadge.io/api/visitors?path=AnasHXH.github.io&countColor=%232563eb&style=flat" alt="Visitor Count">
+  <main class="container">
+    <header class="hero" id="about">
+      <div class="hero-copy">
+        <div class="available">Open to postdoctoral and AI research opportunities</div>
+        <h1>Dr. Anas M. Ali</h1>
+        <p class="role">Ph.D. • Postdoctoral Researcher Candidate • AI Research Scientist</p>
+        <p class="lead">Computer vision researcher developing generative and transformer-based methods for image restoration, remote sensing, medical imaging, and multimodal intelligent systems.</p>
+        <div class="tags">
+          <span>Computer Vision</span><span>Generative AI</span><span>Image Restoration</span><span>Remote Sensing</span><span>Medical Imaging</span>
         </div>
-        
-        <p>© 2026 Dr. Anas M. Ali. All rights reserved.</p>
-    </footer>
+        <div class="links">
+          <a class="button primary" href="mailto:aaboessa@psu.edu.sa"><i class="fa-solid fa-envelope"></i>Email</a>
+          <a class="button" href="https://scholar.google.com/citations?user=eBVRL_gAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i>Scholar</a>
+          <a class="button" href="https://www.linkedin.com/in/anas-m-ali-ph-d-388164268/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a class="button" href="https://github.com/AnasHXH" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a class="button" href="https://orcid.org/0000-0003-0836-6931" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i>ORCID</a>
+          <a class="button" href="https://www.researchgate.net/profile/Anas-M-Ali" target="_blank" rel="noopener"><i class="fa-brands fa-researchgate"></i>ResearchGate</a>
+        </div>
+      </div>
+      <div class="portrait"><img src="img/pic.jpg" alt="Portrait of Dr. Anas M. Ali"><span>Computer Vision • Generative AI</span></div>
+    </header>
 
+    <div class="metrics" aria-label="Research metrics">
+      <div><strong id="metric-publications">53</strong><span>Research outputs</span></div>
+      <div><strong id="metric-citations">1,569</strong><span>Scholar citations</span></div>
+      <div><strong id="metric-hindex">26</strong><span>Scholar h-index</span></div>
+      <div><strong id="metric-i10index">34</strong><span>Scholar i10-index</span></div>
+    </div>
+    <p class="metric-note">Google Scholar metrics • <span id="metrics-updated">updated August 2026</span></p>
+
+    <section id="experience">
+      <header class="section-head"><div><small>Background</small><h2>Academic & Research Experience</h2></div></header>
+      <article class="card">
+        <div class="card-head"><div><h3>Research Assistant</h3><b>Robotics & Internet-of-Things Lab, Prince Sultan University, Riyadh</b></div><time>Sep 2022 – Present</time></div>
+        <ul>
+          <li>Develop generative, diffusion, transformer, and selective-state-space models for image restoration, remote sensing, and medical imaging.</li>
+          <li>Co-supervise researchers, design reproducible evaluation pipelines, and contribute to Q1 publications and international benchmarks.</li>
+          <li>Build multimodal robotic systems integrating ROS2, vision, and large language models.</li>
+          <li><b>Teaching:</b> Generative AI (CS489) and Digital Logic Design (CS175).</li>
+        </ul>
+      </article>
+      <div class="two-col">
+        <article class="card"><div class="card-head"><div><h3>Lecturer & Teaching Assistant</h3><b>Alexandria Higher Institute of Engineering and Technology</b></div><time>2018–2022</time></div><p>Delivered image processing, DSP, programming, and VLSI courses and laboratories while mentoring undergraduate researchers.</p></article>
+        <article class="card"><div class="card-head"><div><h3>Assistant Lecturer (Part-time)</h3><b>Egyptian Air Defense College</b></div><time>2019–2022</time></div><p>Taught Electromagnetic Waves I & II to second-year engineering students.</p></article>
+      </div>
+    </section>
+
+    <section id="education">
+      <header class="section-head"><div><small>Training</small><h2>Education</h2></div></header>
+      <div class="three-col">
+        <article class="card"><div class="card-head"><div><h3>Ph.D., Electronics & Communications Engineering</h3><b>Menoufia University, Egypt</b></div><time>2023–2026</time></div><p><b>Dissertation:</b> Optimized Algorithms for Multimedia Restoration in Computer Vision Applications.</p></article>
+        <article class="card"><div class="card-head"><div><h3>M.Sc., Electronics & Communications Engineering</h3><b>Menoufia University, Egypt</b></div><time>2019–2021</time></div><p>Deep-learning techniques for efficient medical-image super-resolution.</p></article>
+        <article class="card"><div class="card-head"><div><h3>B.Sc., Electronics & Communications Engineering</h3><b>AIET, Egypt</b></div><time>2011–2016</time></div><p>Communications, signal processing, electronics, and computing.</p></article>
+      </div>
+    </section>
+
+    <section id="research">
+      <header class="section-head"><div><small>Current direction</small><h2>Featured Research</h2><p>Efficient vision systems that restore degraded visual information and improve downstream perception.</p></div></header>
+      <div class="three-col research-grid">
+        <article class="card"><h3>DG-GSM</h3><p>Dual-branch gated selective modulation for nighttime remote-sensing enhancement and object detection.</p><b>Low-light enhancement • Remote sensing</b></article>
+        <article class="card"><h3>MAG-ViT</h3><p>Multi-attention grid Vision Transformer for efficient, high-fidelity remote-sensing super-resolution.</p><b>Vision Transformers • Super-resolution</b></article>
+        <article class="card"><h3>SSVA</h3><p>Self-scanned visual attention for enhanced mask-free shadow removal under complex illumination.</p><b>Expert Systems with Applications • 2025</b></article>
+        <article class="card"><h3>DM–AHR</h3><p>Self-supervised conditional diffusion for hair-artifact removal and improved dermoscopic diagnosis.</p><b>Cancers • Medical imaging</b></article>
+        <article class="card"><h3>Dehazing-DiffGAN</h3><p>Sequential diffusion and GAN fusion for high-fidelity dehazing of remote-sensing imagery.</p><b>IEEE TGRS • 2025</b></article>
+        <article class="card"><h3>Prompting Robotic Modalities</h3><p>A structured architecture that centralizes language models across sensing and control modalities.</p><b>FGCS • Multimodal AI & robotics</b></article>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <header class="section-head"><div><small>Recognition</small><h2>Honors & Intellectual Property</h2></div></header>
+      <div class="two-col">
+        <article class="card"><h3>🏆 CVPR 2025 NTIRE Runner-Up</h3><b>Night Photography Rendering Challenge</b><p>Second place in the international NTIRE challenge at IEEE/CVF CVPR 2025.</p></article>
+        <article class="card"><h3>🥈 ROSHN Hackathon — 2nd Place</h3><b>RIOTU Lab, Prince Sultan University</b><p>Recognized for an AI-driven solution in a regional innovation challenge.</p></article>
+        <article class="card"><h3>Registered Software Copyright</h3><b>Saudi Authority for Intellectual Property</b><p>Dual-Branch Attention Network for Dynamic Illumination Enhancement in Nighttime Images.</p></article>
+        <article class="card"><h3>SDAIA Scientific Contribution Award</h3><b>Saudi Data and AI Authority</b><p>Recognition for scientific contributions in artificial intelligence.</p></article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <header class="section-head split">
+        <div><small>Complete record</small><h2>Publications & Research Outputs</h2><p>Search all public research outputs. The cached list is replaced after a successful Scholar refresh.</p></div>
+        <a class="button" href="https://scholar.google.com/citations?user=eBVRL_gAAAAJ&hl=en" target="_blank" rel="noopener">Full Scholar profile ↗</a>
+      </header>
+      <div class="pub-tools">
+        <input id="publication-search" type="search" placeholder="Search by title, year, or topic…" aria-label="Search publications">
+        <select id="publication-type" aria-label="Filter by publication type"><option value="all">All output types</option><option value="article">Articles</option><option value="conference paper">Conference papers</option><option value="chapter">Book chapters</option><option value="preprint">Preprints</option></select>
+      </div>
+      <div id="publication-list" class="publication-list" aria-live="polite"></div>
+      <div class="pub-actions"><span id="publication-results"></span><button id="show-all-publications" class="button" type="button">Show all publications</button></div>
+    </section>
+
+    <section id="skills">
+      <header class="section-head"><div><small>Capabilities</small><h2>Technical Competencies</h2></div></header>
+      <div class="three-col">
+        <article class="card"><h3>AI & Vision Models</h3><div class="tags"><span>Diffusion Models</span><span>Vision Transformers</span><span>GANs</span><span>State-Space Models</span><span>Self-Supervised Learning</span><span>LLMs</span></div></article>
+        <article class="card"><h3>Engineering</h3><div class="tags"><span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>C++</span><span>ROS2</span><span>Docker</span><span>Linux & HPC</span><span>Git</span></div></article>
+        <article class="card"><h3>Application Domains</h3><div class="tags"><span>Image Restoration</span><span>Remote Sensing</span><span>Medical Imaging</span><span>Super-Resolution</span><span>Low-Light Enhancement</span><span>Dehazing</span><span>Shadow Removal</span></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="visitor"><i class="fa-solid fa-chart-line"></i>Page views <img src="https://api.visitorbadge.io/api/visitors?path=AnasHXH.github.io&countColor=%232563eb&style=flat" alt="Visitor count"></div>
+    <p>© 2026 Dr. Anas M. Ali. All rights reserved.</p>
+  </footer>
+  <script src="app.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Anas M. Ali","honorificPrefix":"Dr.","url":"https://anashxh.github.io/","image":"https://anashxh.github.io/img/pic.jpg","jobTitle":"AI Research Scientist","affiliation":{"@type":"Organization","name":"Prince Sultan University"},"sameAs":["https://scholar.google.com/citations?user=eBVRL_gAAAAJ&hl=en","https://www.linkedin.com/in/anas-m-ali-ph-d-388164268/","https://github.com/AnasHXH","https://orcid.org/0000-0003-0836-6931"],"knowsAbout":["Computer Vision","Generative AI","Image Restoration","Remote Sensing","Medical Imaging"]}</script>
 </body>
 </html>

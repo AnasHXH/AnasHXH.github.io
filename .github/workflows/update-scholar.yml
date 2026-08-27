@@ -1,0 +1,46 @@
+name: Update Google Scholar data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 0"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_scholar.py"
+      - ".github/workflows/update-scholar.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-google-scholar-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install Scholar client
+        run: python -m pip install scholarly==1.4.4 httpx==0.24.1
+      - name: Refresh cached profile
+        env:
+          GOOGLE_SCHOLAR_ID: eBVRL_gAAAAJ
+        run: python scripts/update_scholar.py
+      - name: Commit updated data
+        run: |
+          if git diff --quiet -- scholar_data.json; then
+            echo "No Scholar changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scholar_data.json
+          git commit -m "chore: refresh Google Scholar data"
+          git push
