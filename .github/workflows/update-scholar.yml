@@ -7,6 +7,7 @@ on:
   push:
     branches: [main]
     paths:
+      - "requirements.txt"
       - "scripts/update_scholar.py"
       - ".github/workflows/update-scholar.yml"
 
@@ -27,8 +28,9 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: requirements.txt
       - name: Install Scholar client
-        run: python -m pip install scholarly==1.4.4 httpx==0.24.1
+        run: python -m pip install -r requirements.txt
       - name: Refresh cached profile
         env:
           GOOGLE_SCHOLAR_ID: eBVRL_gAAAAJ
