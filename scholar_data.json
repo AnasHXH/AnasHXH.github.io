@@ -1,10 +1,10 @@
 {
   "source": "Google Scholar",
   "author_id": "eBVRL_gAAAAJ",
-  "updated": "2026-10-18T08:00:48.757637+00:00",
+  "updated": "2026-10-25T08:23:39.980201+00:00",
   "metrics": {
-    "publications": 54,
-    "citations": 1640,
+    "publications": 55,
+    "citations": 1650,
     "hindex": 27,
     "i10index": 34
   },
@@ -71,7 +71,7 @@
       "type": "Preprint",
       "venue": "arXiv (Cornell University)",
       "doi": "10.48550/arxiv.2604.11487",
-      "citedby": 48,
+      "citedby": 50,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:RYcK_YlVTxYC"
     },
     {
@@ -139,7 +139,7 @@
       "type": "Preprint",
       "venue": "arXiv (Cornell University)",
       "doi": "10.48550/arxiv.2604.24163",
-      "citedby": 46,
+      "citedby": 47,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:ldfaerwXgEUC"
     },
     {
@@ -651,6 +651,16 @@
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:rO6llkc54NcC"
     },
     {
+      "title": "A Novel E-Commerce Search Engine Based on Multimodal Generative AI for Improving Product Accessibility",
+      "authors": [],
+      "year": 2026,
+      "type": "Article",
+      "venue": "",
+      "doi": "",
+      "citedby": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:yD5IFk8b50cC"
+    },
+    {
       "title": "MAG-ViT: Multi-Attention Grid Vision Transformer for Efficient and Classification-Aware Remote Sensing Super Resolution",
       "authors": [],
       "year": 2026,
@@ -792,7 +802,7 @@
       "type": "Preprint",
       "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
       "doi": "10.1109/cvprw67362.2025.00125",
-      "citedby": 47,
+      "citedby": 48,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:j3f4tGmQtD8C"
     },
     {
@@ -871,21 +881,82 @@
     },
     {
       "title": "NTIRE 2025 ambient lighting normalization challenge report",
-      "authors": [],
+      "authors": [
+        "Florin-Alexandru Vasluianu",
+        "Tim Seizinger",
+        "Zhuyun Zhou",
+        "Zongwei Wu",
+        "Radu Timofte",
+        "Yuanfei Bao",
+        "Xingbo Wang",
+        "Xin Lu",
+        "Jiarong Yang",
+        "Anya Hu",
+        "Kunyu Wang",
+        "Jie Xiao",
+        "Li Dong",
+        "Xueyang Fu",
+        "Zheng-Jun Zha",
+        "Zihao Fan",
+        "Xi Wang",
+        "Yurui Zhu",
+        "Kean Liu",
+        "Senyan Xu",
+        "Hongjian Liu",
+        "Yupeng Xiao",
+        "David Serrano-Lozano",
+        "Francisco A. Molina-Bakhos",
+        "Danna Xue",
+        "Yixiong Yang",
+        "Maria Pilligua",
+        "Ramon Baldrich",
+        "María Vanrell",
+        "Javier Vázquez-Corral",
+        "Xuan Sun",
+        "Zijie Lou",
+        "Ting Liu",
+        "Kuldeep Purohit",
+        "Jameer Babu Pinjari",
+        "Yilin Zhang",
+        "Huan Zheng",
+        "Yanyan Wei",
+        "Suiyi Zhao",
+        "Shengeng Tang",
+        "Zhao Zhang",
+        "Yushen Zuo",
+        "Zongqi He",
+        "Zhe Xiao",
+        "Cuixin Yang",
+        "Rongkang Dong",
+        "Jun Xiao",
+        "Kin‐Man Lam",
+        "Nikhil Akalwadi",
+        "Vijayalaxmi Ashok Aralikatti",
+        "Dheeraj Damodar Hegde",
+        "Ramesh Ashok Tabib",
+        "Uma Mudenagudi",
+        "Anas M. Ali",
+        "Bilel Benjdira",
+        "Wadii Boulila"
+      ],
       "year": 2025,
       "type": "Conference Paper",
-      "venue": "",
-      "doi": "",
+      "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+      "doi": "10.1109/cvprw67362.2025.00121",
       "citedby": 30,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:isC4tDSrTZIC"
     },
     {
       "title": "Prompting Robotic Modalities (PRM): A structured architecture for centralizing language models in complex systems",
-      "authors": [],
+      "authors": [
+        "Bilel Benjdira",
+        "Anis Koubâa",
+        "Anas M. Ali"
+      ],
       "year": 2025,
       "type": "Article",
       "venue": "Future Generation Computer Systems",
-      "doi": "",
+      "doi": "10.1016/j.future.2025.107723",
       "citedby": 28,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:QIV2ME_5wuYC"
     },
@@ -896,7 +967,7 @@
       "type": "Article",
       "venue": "IEEE TGRS",
       "doi": "",
-      "citedby": 12,
+      "citedby": 14,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:hMod-77fHWUC"
     },
     {
@@ -1122,11 +1193,17 @@
     },
     {
       "title": "Single image super-resolution approaches in medical images based-deep learning: a survey",
-      "authors": [],
+      "authors": [
+        "Walid El‐Shafai",
+        "Anas M. Ali",
+        "Samy Abd El‐Nabi",
+        "El‐Sayed M. El‐Rabaie",
+        "Fathi E. Abd El‐Samie"
+      ],
       "year": 2024,
       "type": "Article",
       "venue": "Multimedia Tools and Applications",
-      "doi": "",
+      "doi": "10.1007/s11042-023-16197-w",
       "citedby": 29,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:u5HHmVD_uO8C"
     },
@@ -1174,7 +1251,7 @@
       "type": "Article",
       "venue": "Sensors",
       "doi": "10.3390/s23052385",
-      "citedby": 204,
+      "citedby": 207,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:d1gkVwhDpl0C"
     },
     {
@@ -1306,12 +1383,18 @@
     },
     {
       "title": "Deep-learning-based super-resolution and classification framework for skin disease detection applications",
-      "authors": [],
+      "authors": [
+        "Ibrahim Abd El‐Fattah",
+        "Anas M. Ali",
+        "Walid El‐Shafai",
+        "Taha E. Taha",
+        "Fathi E. Abd El‐Samie"
+      ],
       "year": 2023,
       "type": "Article",
       "venue": "Optical and Quantum Electronics",
-      "doi": "",
-      "citedby": 28,
+      "doi": "10.1007/s11082-022-04432-x",
+      "citedby": 29,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eBVRL_gAAAAJ&citation_for_view=eBVRL_gAAAAJ:9yKSN-GCB0IC"
     },
     {
