@@ -1,6 +1,6 @@
 const scholarProfile="https://scholar.google.com/citations?user=eBVRL_gAAAAJ&hl=en";
 let publications=[],showAll=false;
-const formatNumber=value=>Number(value??0).toLocaleString("en-US");
+const formatNumber=value=>Number(value||0).toLocaleString("en-US");
 
 function safeUrl(url,title){
   return typeof url==="string"&&url.startsWith("https://")?url:`https://scholar.google.com/scholar?q=${encodeURIComponent(title)}`;
@@ -38,14 +38,13 @@ function apaText(publication){
 
 function updateMetrics(data){
   const m=data.metrics||{};
-  document.querySelector("#metric-publications").textContent=formatNumber(m.publications??publications.length);
-  const metrics={citations:m.citations,hindex:m.hindex,i10index:m.i10index};
-  for(const [name,value] of Object.entries(metrics)){
-    if(value!=null)document.querySelector(`#metric-${name}`).textContent=formatNumber(value);
-  }
+  document.querySelector("#metric-publications").textContent=formatNumber(m.publications||publications.length);
+  document.querySelector("#metric-citations").textContent=formatNumber(m.citations||1569);
+  document.querySelector("#metric-hindex").textContent=formatNumber(m.hindex||26);
+  document.querySelector("#metric-i10index").textContent=formatNumber(m.i10index||34);
   if(data.updated){
     const date=new Date(data.updated);
-    if(!Number.isNaN(date.getTime()))document.querySelector("#metrics-updated").textContent=`updated ${date.toLocaleDateString("en-US",{month:"long",year:"numeric",timeZone:"UTC"})}`;
+    if(!Number.isNaN(date.getTime()))document.querySelector("#metrics-updated").textContent=`updated ${date.toLocaleDateString("en-US",{month:"long",year:"numeric"})}`;
   }
 }
 
@@ -96,7 +95,7 @@ function renderPublications(){
     });
     meta.append(copy);body.append(citation,meta);item.append(year,body);
     if(Number(publication.citedby)>0){
-      const cites=document.createElement("div");cites.className="cites";cites.textContent=`${formatNumber(publication.citedby)} ${Number(publication.citedby)===1?"citation":"citations"}`;item.append(cites);
+      const cites=document.createElement("div");cites.className="cites";cites.textContent=`${formatNumber(publication.citedby)} cites`;item.append(cites);
     }
     list.append(item);
   });
@@ -104,14 +103,13 @@ function renderPublications(){
   if(!visible.length){
     const empty=document.createElement("div");empty.className="publication-empty";empty.textContent="No matching publications. Try another search or publication type.";list.append(empty);
   }
-  document.querySelector("#publication-results").textContent=`Showing ${visible.length} of ${filtered.length} publications`;
+  document.querySelector("#publication-results").textContent=`Showing ${visible.length} of ${filtered.length} matching outputs`;
   const button=document.querySelector("#show-all-publications");
   button.hidden=filtered.length<=12||Boolean(query)||type!=="all";
   button.textContent=showAll?"Show latest 12":`Show all ${filtered.length}`;
 }
 
 async function loadScholarData(){
-  document.querySelector("#publication-results").textContent="Loading publications…";
   try{
     const response=await fetch("scholar_data.json",{cache:"no-store"});
     if(!response.ok)throw new Error(`HTTP ${response.status}`);
@@ -119,8 +117,6 @@ async function loadScholarData(){
     publications=Array.isArray(data.publications)?data.publications:[];
     publications.sort((a,b)=>Number(b.year||0)-Number(a.year||0)||Number(b.citedby||0)-Number(a.citedby||0));
     updateMetrics(data);updateTypeOptions();renderPublications();
-    document.querySelector("#publication-search").disabled=false;
-    document.querySelector("#publication-type").disabled=false;
   }catch(error){
     const list=document.querySelector("#publication-list");
     const message=document.createElement("article");message.className="card";
